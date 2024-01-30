@@ -16,7 +16,9 @@ def colorful_time(request):
 
     color_code = "#{:06x}".format(random.randint(0, 0xFFFFFF))
 
-    response_html = f"<p style='color: {color_code}; font-size: 24px;'>Aktuální čas: {current_time}</p>"
+    response_html = f"<div style='display: flex; align-items: center; justify-content: center; height: 100vh;'>"
+    response_html += f"<p style='color: {color_code}; font-size: 24px;'>Aktuální čas: {current_time}</p>"
+    response_html += "</div>"
 
     return HttpResponse(response_html)
 
