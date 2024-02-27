@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muche - Šablona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+        }
+        nav {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Střední škola Muche</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Domů</a></li>
+            <li><a href="#">O nás</a></li>
+            <li><a href="#">Studijní programy</a></li>
+            <li><a href="#">Aktuality</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Vítejte na Střední škole Muche</h2>
+        <p>
+            Jsme moderní střední škola, která nabízí široké spektrum studijních programů.
+            Naše škola se zaměřuje nejen na vzdělání, ale i na rozvoj osobnosti a dovedností
+            našich studentů.
+        </p>
+        <h3>Naše nabídka studijních programů:</h3>
+        <div>
+            <p>Obecné vzdělání</p>
+            <p>Gymnázium</p>
+            <p>Střední odborné školy</p>
+            <p>Umělecké obory</p>
+        </div>
+        <h3>Generátor náhodných čísel:</h3>
+        <p id="randomNumber">Klikněte na tlačítko pro generování čísla.</p>
+        <button onclick="generateRandomNumber()" >Generovat číslo</button>
+    </main>
+    <footer>
+        &copy; 2024 Střední škola Muche | Všechna práva vyhrazena
+    </footer>
+
+    <script>
+       function generateRandomNumber() {
+            var randomNumber = Math.floor(Math.random() * 1000) + 1; // Generování náhodného čísla od 1 do 100
+            document.getElementById("randomNumber").innerHTML = "Vygenerované číslo: " + randomNumber;
+        }
+    </script>
+</body>
+</html>
